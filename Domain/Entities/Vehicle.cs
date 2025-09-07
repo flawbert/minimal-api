@@ -3,21 +3,20 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MinimalApi.Domain.Entities;
 
-public class Admin
+public class Vehicle
 {
     [Key]
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public int Id { get; set; } = default!;
 
     [Required]
-    [StringLength(255)]
-    public string Email { get; set; } = default!;
+    [StringLength(150)]
+    public string Name { get; set; } = default!;
 
     [Required]
-    [StringLength(50)]
-    public string Password { get; set; } = default!;
+    [StringLength(100)]
+    public string Brand { get; set; } = default!;
 
     [Required]
-    [StringLength(10)]
-    public string Profile { get; set; } = default!; 
+    public int Year { get; set; } = default!; 
 }
